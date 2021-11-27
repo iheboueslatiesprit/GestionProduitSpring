@@ -27,6 +27,9 @@ public class Client {
     private Date dateNaissance;
     private String email;
     private String password;
+    @OneToOne
+    @JoinColumn(name = "role_id", referencedColumnName = "id")
+    private Role role;
     @Enumerated(EnumType.STRING)
     private CategorieClient categorieClient;
     @Enumerated(EnumType.STRING)
